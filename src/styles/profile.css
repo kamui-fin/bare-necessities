@@ -1,0 +1,63 @@
+
+.page{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:50rem;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+
+.right-half{
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    font-style: bold;
+    justify-content: center;
+    align-items: center;
+    height:25rem;
+}
+
+.badge-box{
+    display: flex;
+    align-items: flex-start;
+}
+
+.badge{
+    display: flex;
+    
+}
+
+.top-half{
+    display: flex;
+    height: 22rem;
+    /* gap: 8rem; */
+}
+
+.rank{
+    display: flex;
+    justify-content: center;
+}
+
+.bottom{
+    display: flex;
+    padding-top: 1.5rem;
+}
+
+.rank{
+    font-size: 3rem;
+}
+
+.txt-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2rem;
+}
