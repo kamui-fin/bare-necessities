@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/index'
 import Profile from './pages/profile'
+import Leaderboard from './pages/leaderboard'
 import Sidebar from './components/Sidebar'
 import './styles/layout.css'
 
@@ -17,6 +18,18 @@ const AppRouter = () => {
                                 <Sidebar />
                                 <div className="container">
                                     <Home />
+                                </div>
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/leaderboard"
+                        exact
+                        element={
+                            <div className="entry">
+                                <Sidebar />
+                                <div className="container">
+                                    <Leaderboard />
                                 </div>
                             </div>
                         }

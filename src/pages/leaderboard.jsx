@@ -1,26 +1,152 @@
-import React from 'react';
-import './ldStyle.css'; // Import your CSS file
+import React from 'react'
+import './ldStyle.css' // Import your CSS file
+
+const data = {
+    people: [
+        {
+            id: 1,
+            age: 32,
+            annual_income: 65000,
+            occupation: 'Software Developer',
+            current_net_worth: 80000,
+            living_location: 'Austin, Texas',
+            weekly_spendings: 400,
+            allocated_yearly_budget: 45000,
+            image_link: 'https://randomuser.me/api/portraits/men/32.jpg',
+            name: 'Mark Zuckerberg',
+        },
+        {
+            id: 2,
+            age: 45,
+            annual_income: 90000,
+            occupation: 'Marketing Manager',
+            current_net_worth: 120000,
+            living_location: 'Denver, Colorado',
+            weekly_spendings: 450,
+            allocated_yearly_budget: 60000,
+            image_link: 'https://randomuser.me/api/portraits/men/97.jpg',
+            name: 'Dustin Moskovitz',
+        },
+        {
+            id: 3,
+            age: 28,
+            annual_income: 55000,
+            occupation: 'Graphic Designer',
+            current_net_worth: 30000,
+            living_location: 'Seattle, Washington',
+            weekly_spendings: 525,
+            allocated_yearly_budget: 40000,
+            image_link: 'https://randomuser.me/api/portraits/women/17.jpg',
+            name: 'Elizabeth Holmes',
+        },
+        {
+            id: 4,
+            age: 38,
+            annual_income: 75000,
+            occupation: 'Nurse',
+            current_net_worth: 100000,
+            living_location: 'Atlanta, Georgia',
+            weekly_spendings: 600,
+            allocated_yearly_budget: 55000,
+            image_link: 'https://randomuser.me/api/portraits/men/37.jpg',
+            name: 'Evan Spiegel',
+        },
+        {
+            id: 5,
+            age: 29,
+            annual_income: 60000,
+            occupation: 'Teacher',
+            current_net_worth: 20000,
+            living_location: 'Minneapolis, Minnesota',
+            weekly_spendings: 620,
+            allocated_yearly_budget: 35000,
+            image_link: 'https://randomuser.me/api/portraits/men/29.jpg',
+            name: 'Dawson Nichol',
+        },
+        {
+            id: 6,
+            age: 40,
+            annual_income: 80000,
+            occupation: 'Financial Analyst',
+            current_net_worth: 150000,
+            living_location: 'Charlotte, North Carolina',
+            weekly_spendings: 650,
+            allocated_yearly_budget: 70000,
+            image_link: 'https://randomuser.me/api/portraits/men/58.jpg',
+            name: 'Punit Nookala',
+        },
+        {
+            id: 7,
+            age: 35,
+            annual_income: 70000,
+            occupation: 'Sales Representative',
+            current_net_worth: 90000,
+            living_location: 'Portland, Oregon',
+            weekly_spendings: 690,
+            allocated_yearly_budget0: 50000,
+            image_link: 'https://randomuser.me/api/portraits/women/64.jpg',
+            name: 'Alayna Trager',
+        },
+        {
+            id: 8,
+            age: 50,
+            annual_income: 100000,
+            occupation: 'Architect',
+            current_net_worth: 200000,
+            living_location: 'Miami, Florida',
+            weekly_spendings: 720,
+            allocated_yearly_budget: 80000,
+            image_link: 'https://randomuser.me/api/portraits/women/44.jpg',
+            name: 'Kayla Nguyen',
+        },
+        {
+            id: 9,
+            age: 31,
+            annual_income: 70000,
+            occupation: 'Project Manager',
+            current_net_worth: 60000,
+            living_location: 'Chicago, Illinois',
+            weekly_spendings: 750,
+            allocated_yearly_budget: 50000,
+            image_link: 'https://randomuser.me/api/portraits/men/43.jpg',
+            name: 'Jack Smith',
+        },
+        {
+            id: 10,
+            age: 42,
+            annual_income: 85000,
+            occupation: 'Attorney',
+            current_net_worth: 180000,
+            living_location: 'San Francisco, California',
+            weekly_spendings: 810,
+            allocated_yearly_budget: 75000,
+            image_link: 'https://randomuser.me/api/portraits/men/77.jpg',
+            name: 'Ojas Sabharwal',
+        },
+    ],
+}
 
 const Leaderboard = () => {
-  return (
-    <div className="background">
-      <article className="leaderboard">
-        <header>
-          <svg
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 511.999 511.999"
-            style={{ enableBackground: 'new 0 0 511.999 511.999' }}
-            xmlSpace="preserve"
-            className="leaderboard__icon"
-          >
-            <g>
-                <g>
-                    <path d="M466.45,49.374c-7.065-8.308-17.368-13.071-28.267-13.071H402.41v-11.19C402.41,11.266,391.143,0,377.297,0H134.705
+    return (
+        <div className="background">
+            <article className="leaderboard">
+                <header>
+                    <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 511.999 511.999"
+                        style={{ enableBackground: 'new 0 0 511.999 511.999' }}
+                        xmlSpace="preserve"
+                        className="leaderboard__icon"
+                    >
+                        <g>
+                            <g>
+                                <path
+                                    d="M466.45,49.374c-7.065-8.308-17.368-13.071-28.267-13.071H402.41v-11.19C402.41,11.266,391.143,0,377.297,0H134.705
                         c-13.848,0-25.112,11.266-25.112,25.112v11.19H73.816c-10.899,0-21.203,4.764-28.267,13.071
                         c-6.992,8.221-10.014,19.019-8.289,29.624c9.4,57.8,45.775,108.863,97.4,136.872c4.717,11.341,10.059,22.083,16.008,32.091
                         c19.002,31.975,42.625,54.073,68.627,64.76c2.635,26.644-15.094,51.885-41.794,57.9c-0.057,0.013-0.097,0.033-0.153,0.046
@@ -37,12 +163,14 @@ const Leaderboard = () => {
                         c0,58.379-13.406,113.089-37.747,154.049c-23.192,39.03-53.364,60.525-84.956,60.525c-31.597,0-61.771-21.494-84.966-60.523
                         c-24.342-40.961-37.748-95.671-37.748-154.049V25.112c0-0.78,0.634-1.413,1.412-1.413h242.591c0.78,0,1.414,0.634,1.414,1.413
                         V81.803z M451.348,75.192c-6.702,41.208-29.074,78.51-61.569,104.191c8.268-30.283,12.631-63.395,12.631-97.58V60.001h35.773
-                        c3.938,0,7.66,1.723,10.214,4.726C450.915,67.688,451.963,71.405,451.348,75.192z" />
-                </g>
-            </g>
-            <g>
-                <g>
-                    <path d="M327.941,121.658c-1.395-4.288-5.103-7.414-9.566-8.064l-35.758-5.196l-15.991-32.402
+                        c3.938,0,7.66,1.723,10.214,4.726C450.915,67.688,451.963,71.405,451.348,75.192z"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M327.941,121.658c-1.395-4.288-5.103-7.414-9.566-8.064l-35.758-5.196l-15.991-32.402
         c-1.997-4.044-6.116-6.605-10.626-6.605c-4.511,0-8.63,2.561-10.626,6.605l-15.991,32.402l-35.758,5.196
         c-4.464,0.648-8.172,3.775-9.566,8.065c-1.393,4.291-0.231,8.999,2.999,12.148l25.875,25.221l-6.109,35.613
         c-0.763,4.446,1.064,8.938,4.714,11.59c3.648,2.651,8.487,3,12.479,0.902L256,190.32l31.982,16.813
@@ -50,43 +178,51 @@ const Leaderboard = () => {
         l25.875-25.221C328.172,130.658,329.334,125.949,327.941,121.658z M278.064,146.405c-2.793,2.722-4.068,6.644-3.408,10.489
         l3.102,18.09l-16.245-8.541c-1.725-0.908-3.62-1.36-5.514-1.36c-1.894,0-3.788,0.454-5.514,1.36l-16.245,8.541l3.102-18.09
         c0.66-3.844-0.615-7.766-3.408-10.489l-13.141-12.81l18.162-2.64c3.859-0.56,7.196-2.985,8.922-6.482l8.123-16.458l8.122,16.458
-        c1.727,3.497,5.062,5.921,8.922,6.482l18.162,2.64L278.064,146.405z" />
-          </g>
-        </g>
-          </svg>
+        c1.727,3.497,5.062,5.921,8.922,6.482l18.162,2.64L278.064,146.405z"
+                                />
+                            </g>
+                        </g>
+                    </svg>
 
-          <h1 className="leaderboard__title">
-            <span className="leaderboard__title--top">Clan TAMUHack</span>
-            <span className="leaderboard__title--bottom">Leaderboard</span>
-          </h1>
-        </header>
+                    <h1 className="leaderboard__title">
+                        <span className="leaderboard__title--top">
+                            Clan TAMUHack
+                        </span>
+                        <span className="leaderboard__title--bottom">
+                            Leaderboard
+                        </span>
+                    </h1>
+                </header>
 
-        <div className="space_types">
-          <span className="types">Rank</span>
-          <span className="types"></span>
-          <span className="types">Name</span>
-          <span className="types">Money Spent</span>
-        </div>
+                <div className="space_types">
+                    <span className="types">Rank</span>
+                    <span className="types"></span>
+                    <span className="types">Name</span>
+                    <span className="types">Money Spent</span>
+                </div>
 
-        <main className="leaderboard__profiles">
-          <a href="#">
-            <article className="leaderboard__profile">
-              <span className="rank">1</span>
-              <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="Mark Zuckerberg"
-                className="leaderboard__picture"
-              />
-              <span className="leaderboard__name">Mark Zuckerberg</span>
-              <span className="leaderboard__value">$400</span>
+                <main className="leaderboard__profiles">
+                    {data.people.map((e, index) => (
+                        <a href="#" key={index}>
+                            <article className="leaderboard__profile">
+                                <span className="rank">{index + 1}</span>
+                                <img
+                                    src={e.image_link}
+                                    className="leaderboard__picture"
+                                />
+                                <span className="leaderboard__name">
+                                    {e.name}
+                                </span>
+                                <span className="leaderboard__value">
+                                    ${e.weekly_spendings}
+                                </span>
+                            </article>
+                        </a>
+                    ))}
+                </main>
             </article>
-          </a>
+        </div>
+    )
+}
 
-        
-        </main>
-      </article>
-    </div>
-  );
-};
-
-export default Leaderboard;
+export default Leaderboard
