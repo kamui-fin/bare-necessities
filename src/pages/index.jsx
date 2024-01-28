@@ -37,16 +37,16 @@ const TopExpenditures = () => (
             </Thead>
             <Tbody>
                 <Tr>
-                    <Td>Pizza</Td>
-                    <Td isNumeric>$150.3</Td>
+                    <Td>Smartphone (recent model)</Td>
+                    <Td isNumeric>$200</Td>
                 </Tr>
                 <Tr>
-                    <Td>Cookies</Td>
-                    <Td isNumeric>$122.3</Td>
+                    <Td>Clothing shopping (assorted items)</Td>
+                    <Td isNumeric>$150</Td>
                 </Tr>
                 <Tr>
-                    <Td>Haircut</Td>
-                    <Td isNumeric>$100.1</Td>
+                    <Td>Groceries for the week</Td>
+                    <Td isNumeric>$100</Td>
                 </Tr>
             </Tbody>
         </Table>
@@ -56,68 +56,59 @@ const TopExpenditures = () => (
 const fakeData = [
     { date: '2024-01-01', value: 100 },
     { date: '2024-01-02', value: 200 },
-    // Add more fake data for January...
     { date: '2024-02-01', value: 150 },
     { date: '2024-02-02', value: 250 },
-    // Add more fake data for February...
     { date: '2024-03-01', value: 120 },
     { date: '2024-03-02', value: 180 },
-    // Add more fake data for March...
 ]
 
 const getColorForValue = (value, max) => {
     const green = Math.round((value / max) * 255)
-    return `rgb(0, ${green}, 0)`
+    return `rgb(0, ${green}, 200)`
 }
 
 const CalendarHeatmap = () => {
-    // Find the maximum expenditure
     const maxExpenditure = Math.max(...fakeData.map((data) => data.value))
 
     return (
-        <div style={{ maxWidth: '600px' }}>
-            <ReactCalendarHeatmap
-                startDate={new Date('2024-01-01')}
-                endDate={new Date('2024-04-31')}
-                values={fakeData}
-                classForValue={(value) => {
-                    if (!value) {
-                        return 'color-empty'
-                    }
-                    return 'color-filled'
-                }}
-                tooltipDataAttrs={(value) => {
-                    return {
-                        'data-tip': `${value.date}: $${value.value}`,
-                    }
-                }}
-                titleForValue={(value) => {
-                    return value ? `${value.value}` : null
-                }}
-                onMouseOver={(event, value) => {
-                    console.log('Mouse over', value)
-                }}
-                onMouseLeave={(event, value) => {
-                    console.log('Mouse leave', value)
-                }}
-                onClick={(event, value) => {
-                    console.log('Click', value)
-                }}
-                transformDayElement={(rect, value) => {
-                    if (value) {
-                        const color = getColorForValue(
-                            value.value,
-                            maxExpenditure
-                        )
-                        return React.cloneElement(rect, {
-                            style: { fill: color },
-                        })
-                    } else {
-                        return React.cloneElement(rect)
-                    }
-                }}
-            />
-        </div>
+        <ReactCalendarHeatmap
+            startDate={new Date('2024-01-01')}
+            endDate={new Date('2024-08-31')}
+            values={fakeData}
+            classForValue={(value) => {
+                if (!value) {
+                    return 'color-empty'
+                }
+                return 'color-filled'
+            }}
+            tooltipDataAttrs={(value) => {
+                return {
+                    'data-tip': `${value.date}: $${value.value}`,
+                }
+            }}
+            titleForValue={(value) => {
+                return value ? `${value.value}` : null
+            }}
+            onMouseOver={(event, value) => {
+                console.log('Mouse over', value)
+            }}
+            onMouseLeave={(event, value) => {
+                console.log('Mouse leave', value)
+            }}
+            onClick={(event, value) => {
+                console.log('Click', value)
+            }}
+            transformDayElement={(rect, value) => {
+                if (value) {
+                    const color = getColorForValue(value.value, maxExpenditure)
+                    return React.cloneElement(rect, {
+                        style: { fill: color },
+                    })
+                } else {
+                    return React.cloneElement(rect)
+                }
+            }}
+        />
     )
 }
 
@@ -162,10 +153,10 @@ const data = [
     { name: 'Education', value: 20 },
     { name: 'Food', value: 30 },
     { name: 'Travel', value: 15 },
-    // Add more data as needed
+    { name: 'Utilities', value: 25 },
 ]
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'] // Add more colors as needed
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '']
 
 const PieChartComponent = () => {
     return (
@@ -200,45 +191,65 @@ const Index = () => {
                 as="h1"
                 size="2xl"
                 noOfLines={1}
-                style={{ paddingBottom: '1rem' }}
+                style={{ paddingBottom: '1.5rem' }}
             >
-                Welcome Back.
+                Welcome Back!
             </Heading>
 
             <Grid templateColumns="repeat(3, 1fr)" gap={6}>
                 <Card variant="filled">
                     <CardHeader>
-                        <Heading as="h1" size="md" noOfLines={1}>
+                        <Heading
+                            as="h1"
+                            size="md"
+                            noOfLines={1}
+                            color="#6b6e75"
+                        >
                             This Week
                         </Heading>
                     </CardHeader>
                     <CardBody>
-                        <Heading as="h1" size="2xl" noOfLines={1}>
-                            $99.11
+                        <Heading
+                            as="h1"
+                            size="2xl"
+                            noOfLines={1}
+                            color="#e95243"
+                        >
+                            $600.00
                         </Heading>
                     </CardBody>
                 </Card>
                 <Card variant="filled">
                     <CardHeader>
-                        <Heading as="h1" size="md" noOfLines={1}>
+                        <Heading
+                            as="h1"
+                            size="md"
+                            noOfLines={1}
+                            color="#6b6e75"
+                        >
                             This Month
                         </Heading>
                     </CardHeader>
                     <CardBody>
                         <Heading as="h1" size="2xl" noOfLines={1}>
-                            $99.11
+                            $4,520.21
                         </Heading>
                     </CardBody>
                 </Card>
                 <Card variant="filled">
                     <CardHeader>
-                        <Heading as="h1" size="md" noOfLines={1}>
+                        <Heading
+                            as="h1"
+                            size="md"
+                            noOfLines={1}
+                            color="#6b6e75"
+                        >
                             This Year
                         </Heading>
                     </CardHeader>
                     <CardBody>
                         <Heading as="h1" size="2xl" noOfLines={1}>
-                            $99.11
+                            $51,020.15
                         </Heading>
                     </CardBody>
                 </Card>

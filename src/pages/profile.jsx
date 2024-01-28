@@ -9,9 +9,9 @@ import Graph from './graph.jsx'
 import { Card } from '@chakra-ui/react'
 
 const data = {
-    name: 'Venkatasai Gudisa',
-    pfp: 'https://bit.ly/dan-abramov',
-    rank: 2,
+    name: 'Mark Zuckerburg',
+    pfp: 'https://randomuser.me/api/portraits/men/32.jpg',
+    rank: 1,
     tags: [
         {
             name: 'JAN24',
@@ -91,8 +91,14 @@ function Profile() {
                     </div>
                 </GridItem>
                 <GridItem colSpan={1} className="rank">
-                    <Card borderRadius={'2rem'} bg={'#edf2f7'} className="card" h={'10rem'} w={'10rem'}>
-                        <div className='rank-font'>#{data.rank}</div>
+                    <Card
+                        borderRadius={'2rem'}
+                        bg={'#edf2f7'}
+                        className="card"
+                        h={'10rem'}
+                        w={'10rem'}
+                    >
+                        <div className="rank-font">#{data.rank}</div>
                     </Card>
                 </GridItem>
             </Grid>

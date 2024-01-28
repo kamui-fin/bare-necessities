@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar'
 import { NavLink } from 'react-router-dom'
+import '../styles/sidebar.css'
 // import { useAuth0 } from '@auth0/auth0-react'
 
 const AppSidebar = () => {
@@ -17,32 +18,29 @@ const AppSidebar = () => {
 
     return (
         <Sidebar>
-            <img
+            {/* <img
                 src="logo.svg"
                 style={{ marginBottom: '24px', marginTop: '16px' }}
-            />
+            /> */}
             <Menu
                 menuItemStyles={{
                     button: {
                         [`&.active`]: {
-                            backgroundColor: '#2B2C28',
+                            backgroundColor: '#339989',
                             color: '#FFFAFB',
                         },
                     },
                 }}
             >
                 <MenuItem component={<NavLink to="/" />}>Dashboard</MenuItem>
-                <MenuItem component={<NavLink to="/onboard" />}>
-                    Onboard
-                </MenuItem>
-                <MenuItem component={<NavLink to="/fire" />}>
+                {/* <MenuItem component={<NavLink to="/fire" />}>
                     Retire Early
-                </MenuItem>
+                </MenuItem> */}
                 <MenuItem component={<NavLink to="/leaderboard" />}>
                     Leaderboard
                 </MenuItem>
                 <MenuItem component={<NavLink to="/profile" />}>
-                    Profile
+                    My Profile
                 </MenuItem>
                 {/* <MenuItem
                     component={

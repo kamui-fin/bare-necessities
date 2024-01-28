@@ -14,6 +14,20 @@ const data = {
             allocated_yearly_budget: 45000,
             image_link: 'https://randomuser.me/api/portraits/men/32.jpg',
             name: 'Mark Zuckerberg',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 2,
@@ -26,6 +40,20 @@ const data = {
             allocated_yearly_budget: 60000,
             image_link: 'https://randomuser.me/api/portraits/men/97.jpg',
             name: 'Dustin Moskovitz',
+            tags: [
+                {
+                    name: 'MAR23',
+                    weeks: 1,
+                },
+                {
+                    name: 'JUN23',
+                    weeks: 2,
+                },
+                {
+                    name: 'APR23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 3,
@@ -38,6 +66,20 @@ const data = {
             allocated_yearly_budget: 40000,
             image_link: 'https://randomuser.me/api/portraits/women/17.jpg',
             name: 'Elizabeth Holmes',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 4,
@@ -50,6 +92,20 @@ const data = {
             allocated_yearly_budget: 55000,
             image_link: 'https://randomuser.me/api/portraits/men/37.jpg',
             name: 'Evan Spiegel',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 5,
@@ -62,6 +118,20 @@ const data = {
             allocated_yearly_budget: 35000,
             image_link: 'https://randomuser.me/api/portraits/men/29.jpg',
             name: 'Dawson Nichol',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 6,
@@ -74,6 +144,20 @@ const data = {
             allocated_yearly_budget: 70000,
             image_link: 'https://randomuser.me/api/portraits/men/58.jpg',
             name: 'Punit Nookala',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 7,
@@ -86,6 +170,20 @@ const data = {
             allocated_yearly_budget0: 50000,
             image_link: 'https://randomuser.me/api/portraits/women/64.jpg',
             name: 'Alayna Trager',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 8,
@@ -98,6 +196,20 @@ const data = {
             allocated_yearly_budget: 80000,
             image_link: 'https://randomuser.me/api/portraits/women/44.jpg',
             name: 'Kayla Nguyen',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 9,
@@ -110,6 +222,20 @@ const data = {
             allocated_yearly_budget: 50000,
             image_link: 'https://randomuser.me/api/portraits/men/43.jpg',
             name: 'Jack Smith',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
         {
             id: 10,
@@ -122,6 +248,20 @@ const data = {
             allocated_yearly_budget: 75000,
             image_link: 'https://randomuser.me/api/portraits/men/77.jpg',
             name: 'Ojas Sabharwal',
+            tags: [
+                {
+                    name: 'JAN24',
+                    weeks: 2,
+                },
+                {
+                    name: 'DEC23',
+                    weeks: 1,
+                },
+                {
+                    name: 'NOV23',
+                    weeks: 3,
+                },
+            ],
         },
     ],
 }
