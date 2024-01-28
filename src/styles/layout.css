@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html * {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.entry {
+    display: flex;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 100%;
+}
