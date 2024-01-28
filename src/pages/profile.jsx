@@ -76,7 +76,6 @@ function Profile() {
                         <Box
                             w="100%"
                             h="8rem"
-                            bg="#edf2f7"
                             p={4}
                             color="beige"
                             borderRadius="2rem"
