@@ -35,7 +35,7 @@ const AppRouter = () => {
                         }
                     />
                     <Route
-                        path="/profile"
+                        path="/profile/:id?"
                         exact
                         element={
                             <div className="entry">

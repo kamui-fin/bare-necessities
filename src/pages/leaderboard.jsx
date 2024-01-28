@@ -1,7 +1,8 @@
 import React from 'react'
 import './ldStyle.css' // Import your CSS file
+import { Link } from 'react-router-dom'
 
-const data = {
+export const leader_data = {
     people: [
         {
             id: 1,
@@ -342,8 +343,8 @@ const Leaderboard = () => {
                 </div>
 
                 <main className="leaderboard__profiles">
-                    {data.people.map((e, index) => (
-                        <a href="#" key={index}>
+                    {leader_data.people.map((e, index) => (
+                        <Link to={`/profile/${e.id}`} key={index}>
                             <article className="leaderboard__profile">
                                 <span className="rank">{index + 1}</span>
                                 <img
@@ -357,7 +358,7 @@ const Leaderboard = () => {
                                     ${e.weekly_spendings}
                                 </span>
                             </article>
-                        </a>
+                        </Link>
                     ))}
                 </main>
             </article>

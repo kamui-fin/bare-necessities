@@ -6,29 +6,18 @@ import { Grid, GridItem } from '@chakra-ui/react'
 import { Tooltip } from '@chakra-ui/react'
 import { Tag, TagLabel } from '@chakra-ui/react'
 import Graph from './graph.jsx'
+import { leader_data } from './leaderboard'
 import { Card } from '@chakra-ui/react'
-
-const data = {
-    name: 'Mark Zuckerburg',
-    pfp: 'https://randomuser.me/api/portraits/men/32.jpg',
-    rank: 1,
-    tags: [
-        {
-            name: 'JAN24',
-            weeks: 2,
-        },
-        {
-            name: 'DEC23',
-            weeks: 1,
-        },
-        {
-            name: 'NOV23',
-            weeks: 3,
-        },
-    ],
-}
+import { useParams } from 'react-router'
 
 function Profile() {
+    const { id } = useParams()
+    let data
+    if (!id) {
+        data = leader_data.people[0]
+    } else {
+        data = leader_data.people.find((e) => e.id === Number.parseInt(id))
+    }
     function getTag(str, numWeeks) {
         let color = ''
         switch (numWeeks) {
@@ -66,7 +55,11 @@ function Profile() {
                 gap={4}
             >
                 <GridItem colSpan={2} className="img-container">
-                    <Image borderRadius="full" boxSize="15em" src={data.pfp} />
+                    <Image
+                        borderRadius="full"
+                        boxSize="15em"
+                        src={data.image_link}
+                    />
                 </GridItem>
                 <GridItem colSpan={3} className="txt-container">
                     <div className="txt-container">
@@ -98,7 +91,7 @@ function Profile() {
                         h={'10rem'}
                         w={'10rem'}
                     >
-                        <div className="rank-font">#{data.rank}</div>
+                        <div className="rank-font">#{data.id}</div>
                     </Card>
                 </GridItem>
             </Grid>
