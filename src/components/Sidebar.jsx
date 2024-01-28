@@ -18,10 +18,14 @@ const AppSidebar = () => {
 
     return (
         <Sidebar>
-            {/* <img
-                src="logo.svg"
-                style={{ marginBottom: '24px', marginTop: '16px' }}
-            /> */}
+            <img
+                src="/logo.svg"
+                style={{
+                    marginBottom: '24px',
+                    marginTop: '16px',
+                    marginLeft: '26px',
+                }}
+            />
             <Menu
                 menuItemStyles={{
                     button: {
@@ -33,14 +37,17 @@ const AppSidebar = () => {
                 }}
             >
                 <MenuItem component={<NavLink to="/" />}>Dashboard</MenuItem>
-                {/* <MenuItem component={<NavLink to="/fire" />}>
-                    Retire Early
-                </MenuItem> */}
                 <MenuItem component={<NavLink to="/leaderboard" />}>
                     Leaderboard
                 </MenuItem>
+                <MenuItem component={<NavLink to="/settings" />}>
+                    Match Settings
+                </MenuItem>
                 <MenuItem component={<NavLink to="/profile" />}>
                     My Profile
+                </MenuItem>
+                <MenuItem component={<NavLink to="/fire" />}>
+                    FIRE Planner
                 </MenuItem>
                 {/* <MenuItem
                     component={

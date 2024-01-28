@@ -224,7 +224,7 @@ const Index = () => {
                 noOfLines={1}
                 style={{ paddingBottom: '1.5rem' }}
             >
-                Welcome Back!
+                Your Bare Necessities...
             </Heading>
 
             <Grid templateColumns="repeat(3, 1fr)" gap={6}>
@@ -244,7 +244,7 @@ const Index = () => {
                             as="h1"
                             size="2xl"
                             noOfLines={1}
-                            color="#e95243"
+                            color="#00b8c8"
                         >
                             $600.00
                         </Heading>
@@ -262,7 +262,12 @@ const Index = () => {
                         </Heading>
                     </CardHeader>
                     <CardBody>
-                        <Heading as="h1" size="2xl" noOfLines={1}>
+                        <Heading
+                            as="h1"
+                            size="2xl"
+                            noOfLines={1}
+                            color="#0099c8"
+                        >
                             $4,520.21
                         </Heading>
                     </CardBody>
@@ -279,7 +284,12 @@ const Index = () => {
                         </Heading>
                     </CardHeader>
                     <CardBody>
-                        <Heading as="h1" size="2xl" noOfLines={1}>
+                        <Heading
+                            as="h1"
+                            size="2xl"
+                            noOfLines={1}
+                            color="#007ac8"
+                        >
                             $51,020.15
                         </Heading>
                     </CardBody>

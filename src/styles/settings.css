@@ -1,0 +1,14 @@
+form {
+    width: 700px;
+    padding-bottom: 1rem;
+}
+
+.bigger {
+    font-size: 1.5rem;
+}
+
+.chakra-stack > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

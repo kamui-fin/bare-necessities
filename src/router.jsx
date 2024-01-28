@@ -4,6 +4,8 @@ import Profile from './pages/profile'
 import Leaderboard from './pages/leaderboard'
 import Sidebar from './components/Sidebar'
 import './styles/layout.css'
+import Settings from './pages/settings'
+import Fire from './pages/fire'
 
 const AppRouter = () => {
     return (
@@ -42,6 +44,30 @@ const AppRouter = () => {
                                 <Sidebar />
                                 <div className="container">
                                     <Profile />
+                                </div>
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/settings"
+                        exact
+                        element={
+                            <div className="entry">
+                                <Sidebar />
+                                <div className="container">
+                                    <Settings />
+                                </div>
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/fire"
+                        exact
+                        element={
+                            <div className="entry">
+                                <Sidebar />
+                                <div className="container">
+                                    <Fire />
                                 </div>
                             </div>
                         }
