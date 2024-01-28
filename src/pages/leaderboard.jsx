@@ -283,6 +283,7 @@ const Leaderboard = () => {
                         style={{ enableBackground: 'new 0 0 511.999 511.999' }}
                         xmlSpace="preserve"
                         className="leaderboard__icon"
+                        fill='#339989'
                     >
                         <g>
                             <g>

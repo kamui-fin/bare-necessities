@@ -69,7 +69,6 @@ function Profile() {
                         <Box
                             w="100%"
                             h="8rem"
-                            bg="#edf2f7"
                             p={4}
                             color="beige"
                             borderRadius="2rem"
@@ -96,7 +95,20 @@ function Profile() {
                 </GridItem>
             </Grid>
             <div className="bottom">
-                <Graph />
+            <Grid
+                h="20rem"
+                w="60rem"
+                templateRows="repeat(1, 1fr)"
+                templateColumns="repeat(9, 1fr)"
+                margin={'2.5rem'}
+                gap={0}
+            >
+                <GridItem colSpan={9}>
+                    <Graph />
+                </GridItem>
+                
+            </Grid>
+                
             </div>
         </div>
     )
