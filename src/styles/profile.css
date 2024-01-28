@@ -1,9 +1,20 @@
 .page {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     justify-content: center;
     align-items: center;
     height: 50rem;
+=======
+    justify-content: space-around;
+    align-items: flex-start;
+    height:50rem;
+    /* gap: 8rem; */
+}
+
+.container{
+    margin:0;
+>>>>>>> e298ace8207449c64986265a8cbd8b0afd94ef71
 }
 
 .img-container {
@@ -48,7 +59,7 @@
 .bottom {
     display: flex;
     padding-top: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     width: 65rem;
 }
 
@@ -75,6 +86,17 @@ span {
     margin: 0.3rem;
 }
 
+<<<<<<< HEAD
 .card {
     padding: 0 1.5rem 0 1.5rem;
 }
+=======
+.txt-container  div{
+    padding: 0;
+}
+
+.card{
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+>>>>>>> e298ace8207449c64986265a8cbd8b0afd94ef71
