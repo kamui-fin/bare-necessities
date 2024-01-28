@@ -62,11 +62,9 @@ function Profile() {
                 w="90rem"
                 templateRows="repeat(1, 1fr)"
                 templateColumns="repeat(9, 1fr)"
-                flex={'left'}
+                margin={'2.5rem'}
                 gap={4}
             >
-                <GridItem rowSpan={1} colSpan={1}></GridItem>
-                <GridItem rowSpan={1} colSpan={1}></GridItem>
                 <GridItem colSpan={2} className="img-container">
                     <Image borderRadius="full" boxSize="15em" src={data.pfp} />
                 </GridItem>
@@ -93,14 +91,10 @@ function Profile() {
                     </div>
                 </GridItem>
                 <GridItem colSpan={1} className="rank">
-                    <Card borderRadius={'2rem'} bg={'#edf2f7'} className="card">
-                        <div>#{data.rank}</div>
+                    <Card borderRadius={'2rem'} bg={'#edf2f7'} className="card" h={'10rem'} w={'10rem'}>
+                        <div className='rank-font'>#{data.rank}</div>
                     </Card>
                 </GridItem>
-
-                {/* <GridItem colSpan={4} className='bottom' >
-                    {plot_graph()}
-                </GridItem> */}
             </Grid>
             <div className="bottom">
                 <Graph />

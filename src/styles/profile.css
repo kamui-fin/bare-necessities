@@ -1,11 +1,6 @@
 .page {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    justify-content: center;
-    align-items: center;
-    height: 50rem;
-=======
     justify-content: space-around;
     align-items: flex-start;
     height:50rem;
@@ -14,7 +9,6 @@
 
 .container{
     margin:0;
->>>>>>> e298ace8207449c64986265a8cbd8b0afd94ef71
 }
 
 .img-container {
@@ -23,6 +17,7 @@
     align-items: center;
     padding: 0;
     justify-content: center;
+    margin-left: 1rem;
     /* gap:2rem; */
 }
 
@@ -39,6 +34,7 @@
 .badge-box {
     display: flex;
     align-items: flex-start;
+
 }
 
 .badge {
@@ -48,6 +44,7 @@
 .top-half {
     display: flex;
     height: 22rem;
+    /* margin:1rem; */
     /* gap: 8rem; */
 }
 
@@ -58,7 +55,7 @@
 
 .bottom {
     display: flex;
-    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
     justify-content: flex-start;
     width: 65rem;
 }
@@ -86,17 +83,22 @@ span {
     margin: 0.3rem;
 }
 
-<<<<<<< HEAD
-.card {
-    padding: 0 1.5rem 0 1.5rem;
-}
-=======
 .txt-container  div{
     padding: 0;
 }
 
 .card{
     padding: 0 1.5rem 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
->>>>>>> e298ace8207449c64986265a8cbd8b0afd94ef71
+.rank-font{
+    font-size: 5rem;
+}
+
+.tag-container{
+    margin: 0.5rem;
+}
+
