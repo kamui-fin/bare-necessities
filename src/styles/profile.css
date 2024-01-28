@@ -11,8 +11,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding:0;
     justify-content: center;
-    gap:2rem;
+    /* gap:2rem; */
 }
 
 .right-half{
@@ -43,21 +44,39 @@
 
 .rank{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .bottom{
     display: flex;
     padding-top: 1.5rem;
+    justify-content: center;
+    width: 65rem;
 }
 
 .rank{
-    font-size: 3rem;
+    font-size: 8rem;
+    color: #339989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2.5rem;
 }
 
 .txt-container{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    gap:2rem;
+    gap: 1rem;
+    width: 22rem;
+    /* padding-top: 4.4rem; */
+}
+
+span {
+    margin: .3rem;
+}
+
+.card{
+    padding: 0 1.5rem 0 1.5rem;
 }

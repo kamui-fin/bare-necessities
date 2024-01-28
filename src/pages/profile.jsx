@@ -3,143 +3,90 @@ import { Image } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Grid, GridItem } from '@chakra-ui/react'
+import { Tooltip } from '@chakra-ui/react'
 import {
     Tag,
     TagLabel,
 } from '@chakra-ui/react'
-import {
-    LineChart,
-    ResponsiveContainer,
-    Legend,
-    Tooltip,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-} from "recharts"; 
-
+import Graph from './graph.jsx'
+import { Card } from '@chakra-ui/react'
 
 function Profile () {
-    const pdata = [
-        {
-            week: 1,
-            rank: 5,
-        },
-        {
-            week: 2,
-            rank: 6,
-        },
-        {
-            week: 3,
-            rank: 10,
-        },
-        {
-            week: 4,
-            rank: 5,
-        },
-        {
-            week: 5,
-            rank: 4,
-        },
-        {
-            week: 6,
-            rank: 8,
-        },
-        {
-            week: 7,
-            rank: 5,
-        },
-        {
-            week: 8,
-            rank: 6,
-        },
-        {
-            week: 9,
-            rank: 10,
-        },
-        {
-            week: 10,
-            rank: 5,
-        },
-        {
-            week: 11,
-            rank: 4,
-        },
-        {
-            week: 12,
-            rank: 8,
-        }];
+    
 
-    function plot_graph(){
-        return (
-            <>
-            <ResponsiveContainer width="100%" aspect={3}>
-                <LineChart data={pdata} >
-                    <CartesianGrid />
-                    <XAxis dataKey="week" interval={"preserveStartEnd"} />
-                    <YAxis></YAxis>
-                    <Legend />
-                    <Tooltip />
-                    <Line
-                        dataKey='week'
-                        stroke='black'
-                    />
-                    <Line dataKey="rank" stroke="red" activeDot={{ r: 8 }} />
-                </LineChart>
-            </ResponsiveContainer>
-        </>
-          );
+    function getTag(str, numWeeks){
+        let color = ''
+        switch (numWeeks){
+            case 1: color = '#8cffec';break;
+            case 2: color = '#6dc6b7'; break;
+            case 3: color = '#509186'; break;
+            case 4: color = '#6dc6b7'; break;
+        }
+        
+        return(
+            <Tooltip label={numWeeks + ' weeks'} aria-label='A tooltip'>
+                <Tag size='lg' bg={color} borderRadius='full' className='tag'>
+                <TagLabel className='inner-tag'>{str}</TagLabel>
+             </Tag>
+            </Tooltip>
+            
+        )
     }
 
     return(
         <div className='page'>
             <Grid
                 h='100rem'
-                w='80rem'
-                templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(4, 1fr)'
+                w='90rem'
+                templateRows='repeat(1, 1fr)'
+                templateColumns='repeat(9, 1fr)'
+                flex={'left'}
                 gap={4}
             >
-                <GridItem rowSpan={2} colSpan={1} bg='tomato'>
+                <GridItem rowSpan={1} colSpan={1}>
                 </GridItem>
-                <GridItem colSpan={1}  className='img-container'>
-                    <div>
+                <GridItem rowSpan={1} colSpan={1}>
+                </GridItem>
+                <GridItem colSpan={2}  className='img-container'>
                         <Image
                             borderRadius= 'full'
                             boxSize='15em'
                             src='https://bit.ly/dan-abramov'
                             alt='Dan Abramov'
                             />
-                     </div>
                 </GridItem>
-                <GridItem colSpan={1} className='img-container'>
+                <GridItem colSpan={3} className='txt-container'>
                     <div className='txt-container'>
                             <Heading size='lg' style={{color:'#131515'}}>Venkatasai Gudisa</Heading>
-                            <div className='rank'>#3</div>
+                            <Box w='100%' h='8rem' 
+                                bg='#edf2f7' 
+                                p={4} 
+                                color='beige' 
+                                borderRadius='2rem'
+                                className='badge-box'
+                            >
+                            <div className='tag-container'>
+                                {getTag('JAN24', 2)}
+                                {getTag('DEC23', 1)}
+                                {getTag('NOV23', 3)}
+                            </div>
+                        </Box>
                      </div>
                 </GridItem>
-                <GridItem colSpan={1}>
-                    <div className='right-half'>
-                        
-                        <Box w='100%' h='12rem' 
-                            bg='#FFFAFB' 
-                            p={4} 
-                            color='beige' 
-                            borderWidth={'.4rem'} 
-                            borderColor={'#131515'} 
-                            borderRadius='2rem'
-                            className='badge-box'
-                        >
-                            <Tag size='lg' bg='#7DE2D1' borderRadius='full'>
-                                <TagLabel>JAN24</TagLabel>
-                            </Tag>
-                        </Box>
-                    </div>
+                <GridItem colSpan={1} className='rank'>
+                    <Card borderRadius={'2rem'} bg={'#edf2f7'} className='card'>
+                            <div>#3</div>
+                    </Card>
                 </GridItem>
-                <GridItem colSpan={3} className='bottom' >
+                
+                {/* <GridItem colSpan={4} className='bottom' >
                     {plot_graph()}
-                </GridItem>
+                </GridItem> */}
+                
             </Grid>
+            <div className='bottom'>
+                <Graph />
+            </div>
         </div>
     )
 
