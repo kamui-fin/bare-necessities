@@ -36,17 +36,13 @@ function Profile () {
     return(
         <div className='page'>
             <Grid
-                h='100rem'
+                h='15rem'
                 w='90rem'
                 templateRows='repeat(1, 1fr)'
                 templateColumns='repeat(9, 1fr)'
                 flex={'left'}
                 gap={4}
             >
-                <GridItem rowSpan={1} colSpan={1}>
-                </GridItem>
-                <GridItem rowSpan={1} colSpan={1}>
-                </GridItem>
                 <GridItem colSpan={2}  className='img-container'>
                         <Image
                             borderRadius= 'full'
@@ -59,7 +55,7 @@ function Profile () {
                     <div className='txt-container'>
                             <Heading size='lg' style={{color:'#131515'}}>Venkatasai Gudisa</Heading>
                             <Box w='100%' h='8rem' 
-                                bg='#edf2f7' 
+                                padding={'unset'}
                                 p={4} 
                                 color='beige' 
                                 borderRadius='2rem'
