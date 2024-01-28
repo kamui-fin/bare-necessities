@@ -17,7 +17,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v1
               with:
-                  node-version: 16
+                  node-version: 18
 
             - name: Install dependencies
               uses: bahmutov/npm-install@v1
@@ -49,4 +49,3 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./dist
-
