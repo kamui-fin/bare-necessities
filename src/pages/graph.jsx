@@ -7,9 +7,9 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
-} from "recharts"; 
+} from 'recharts'
 
-function Graph(){
+function Graph() {
     const pdata = [
         {
             week: 1,
@@ -58,27 +58,24 @@ function Graph(){
         {
             week: 12,
             rank: 8,
-        }];
+        },
+    ]
 
     return (
         <>
-        <ResponsiveContainer width="100%" aspect={3}>
-            <LineChart data={pdata} >
-                <CartesianGrid />
-                <XAxis dataKey="week" interval={"preserveStartEnd"} />
-                <YAxis></YAxis>
-                <Legend />
-                <Tooltip />
-                <Line
-                    dataKey='week'
-                    stroke='black'
-                />
-                <Line dataKey="rank" stroke="red" activeDot={{ r: 8 }} />
-            </LineChart>
-        </ResponsiveContainer>
-    </>
-      );
+            <ResponsiveContainer width="100%" aspect={3}>
+                <LineChart data={pdata}>
+                    <CartesianGrid />
+                    <XAxis dataKey="week" interval={'preserveStartEnd'} />
+                    <YAxis></YAxis>
+                    <Legend />
+                    <Tooltip />
+                    <Line dataKey="week" stroke="black" />
+                    <Line dataKey="rank" stroke="red" activeDot={{ r: 8 }} />
+                </LineChart>
+            </ResponsiveContainer>
+        </>
+    )
 }
 
-export default Graph;
-
+export default Graph

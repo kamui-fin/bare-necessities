@@ -32,7 +32,9 @@ const AppSidebar = () => {
                 }}
             >
                 <MenuItem component={<NavLink to="/" />}>Dashboard</MenuItem>
-                <MenuItem component={<NavLink to="/onboard" />}>Onboard</MenuItem>
+                <MenuItem component={<NavLink to="/onboard" />}>
+                    Onboard
+                </MenuItem>
                 <MenuItem component={<NavLink to="/fire" />}>
                     Retire Early
                 </MenuItem>
